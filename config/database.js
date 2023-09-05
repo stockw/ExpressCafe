@@ -16,7 +16,7 @@ mongoose.set('strictQuery', false);
 //
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
-  useCreateIndex: true,
+//   useCreateIndex: true,
   useUnifiedTopology: true
 });
 

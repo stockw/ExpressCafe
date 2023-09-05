@@ -27,7 +27,7 @@ function App() {
     }
       getSession();
 
-  }, []);
+  }, [setUser]);
 
 
   // get items and set in context
@@ -38,7 +38,7 @@ function App() {
       setItems(items)
     }
     getItems()
-  }, [])
+  }, [setItems])
 
 
 
@@ -58,14 +58,14 @@ function App() {
     if (user) {
       getCart()
     }
-  }, [user])
+  }, [user, setCart])
 
   
   const returnPage = () => {
     if (callWasMade) {
       return (
         <>
-          { user ? 
+          { user ? (
             <div className="page-wrapper">
               <NavBar />
               <Routes>
@@ -74,15 +74,16 @@ function App() {
                 <Route path="/*" element={<Navigate to="/orders/new" />} />
               </Routes>
             </div>
-              :
+           ) : (
               <AuthPage />
-          }
+          )}
         </>
       )
     } else {
-      return <div>
+      return (<div>
         <Loader />
       </div>
+      );
     }
   }
   
