@@ -1,5 +1,6 @@
 // use rcc to give a class component
 import React, { Component } from 'react'
+import { signUp } from '../../utilities/user-functions'
 
 export default class SignUpForm extends Component {
 

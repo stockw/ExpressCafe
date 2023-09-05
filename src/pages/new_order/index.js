@@ -1,8 +1,14 @@
 import React from 'react'
+import Cart from '../../components/cart'
+import MenuList from '../../components/menu_list'
+import './index.js'
 
 const NewOrderPage = () => {
   return (
-    <div>NewOrderPage</div>
+    <div className='NewOrderPage'>
+        <MenuList />
+        <Cart />
+    </div>
   )
 }
 

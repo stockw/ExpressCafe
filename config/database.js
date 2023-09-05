@@ -20,3 +20,6 @@ mongoose.connect(connectionString, {
   useUnifiedTopology: true
 });
 
+// function will activate once to let us know we are connected
+mongoose.connection.once('open', ()=> {
+});
